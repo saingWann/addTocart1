@@ -1,0 +1,250 @@
+
+@import url(../node_modules/bootstrap-icons/font/bootstrap-icons.min.css);
+@import url(../node_modules/animate.css/animate.min.css);
+
+// sweet alert
+// pop up box
+$swal2-border-radius: 0 !default;
+// confirm btn
+$swal2-confirm-button-border-radius: 0em !default;
+$swal2-confirm-button-background-color: #071e33 !default;
+
+// cancel btn
+$swal2-cancel-button-border-radius: 0em !default;
+$swal2-cancel-button-background-color: #b3b6b9 !default;
+$swal2-cancel-button-color: black !default;
+
+$swal2-error: #071e33 !default;
+@import "../node_modules/sweetalert2/src/sweetalert2.scss";
+
+
+
+$dark : #071e33;
+$active-bg: #071e33;
+$--bs-btn-active-color: #071e33;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+[navbar]{
+  position: fixed;
+  top: -3.2rem;
+  left: 50%;
+  transform: translate(-50%,50%);
+  z-index: 1;
+  background-color: #071e33 !important;
+  padding: 1rem;
+  color: white !important;
+  -webkit-box-shadow: 0px 10px 20px -11px rgba(0, 0, 0, 0.225);
+  -moz-box-shadow: 0px 10px 20px -11px rgba(0,0,0,0.13);
+  box-shadow: 0px 10px 20px -11px rgba(0,0,0,0.23);
+}
+
+#top{
+  padding-top: 5rem;
+}
+
+[scrollToTop]{
+  position: fixed;
+  right: 2rem;
+  bottom: 5rem;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  outline: none !important;
+  display: none;
+}
+
+.search-bar-wrapper{
+  margin-top: 2rem;
+  transition: all 300ms;
+  width: 22rem;
+  background-color: #ff0000;
+}
+
+[search-icon]{
+  pointer-events: none;
+}
+
+[search-input]{
+  border: none; 
+  background-color: #9f9fa091;
+  color: white; 
+  padding: 7px 10px;
+}
+[search-input]:focus{
+  outline: none;
+}
+[scrollToTop]:hover{
+  background-color: rgb(153, 153, 153);
+}
+
+.productImgaeContainer> img{
+  height: 6rem;
+  margin-bottom: -3rem;
+}
+
+
+[productDescription]{
+    height: 6rem;
+    overflow: hidden;
+    // color: red;
+}
+
+.product-name{
+
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.productsContainer{
+    position: relative;
+    // border: 1px red solid;
+    margin-top: 4rem;
+    transition: all 500ms ease-in-out;
+    animation: fadeIn 500ms;
+}
+
+
+@keyframes fadeIn {
+  0%{opacity: 0;
+    transform: translateY(-20%);}
+  100%{opacity: 1;
+    transform: translateY(0);}
+}
+
+.productCardContainer img{
+    position: absolute;
+    top: -10%;
+    left: 10%;
+}
+ 
+.productsContainer img{
+  transition: 300ms ease-in-out;
+}
+
+
+.productsContainer:hover img{
+  rotate: -5deg;
+  
+}
+
+.productsContainer:hover .productInfo {
+  -webkit-box-shadow: 0px 10px 20px -11px rgba(0,0,0,0.73);
+  -moz-box-shadow: 0px 10px 20px -11px rgba(0,0,0,0.73);
+  box-shadow: 0px 10px 20px -11px rgba(0,0,0,0.73);
+}
+
+
+.productInfo{
+ padding-top: 4rem;
+ padding: 4rem 2rem 2rem 2rem;
+}
+
+.badge{
+    font-size: 12px;
+    pointer-events: none;
+}
+
+
+.categoryBtn{
+    background-color: white !important;
+    border: rgba(0, 0, 0, 0.404) 1px solid !important;
+}
+.categoryBtn:active{
+  background-color: #071e33 !important;
+  color: white;
+}
+
+.categoryBtn:hover{
+    background-color: #071e33 !important;
+    color: white;
+  }
+  
+.categoryBtn.active{
+    background-color: #071e33 !important;
+    color: white;
+  }
+
+
+//   cart related
+
+.offcanvas{
+  overflow-y: auto;
+}
+.item-in-cart .item-in-cart-img{
+    width: 3rem;
+    margin-bottom: -2rem;
+
+}
+
+[plusButton],[minusButton]{
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+[addToCartBtn].active{
+  background-color: #071e33 !important;
+  color: white !important;
+  transition: all 500ms ;
+}
+[addToCartBtn]:hover{
+  background-color: rgba(0, 0, 0, 0.575);
+  color: white;
+}
+
+[deleteBtnEle]{
+  opacity: 0;
+  transition: all 300ms;
+  pointer-events: none;
+ 
+}
+
+@keyframes slideIn {
+
+  0%{
+    transform: translateX(30%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+  
+}
+[quantity]::-webkit-inner-spin-button,
+[quantity]::-webkit-inner-spin-button{
+ -webkit-appearance: none;
+}
+
+[quantity] {
+  width: 25%;
+}
+
+.item-in-cart:hover [deleteBtnEle]{
+  opacity: 1;
+  pointer-events: all;
+  animation: slideIn 300ms;
+}
+
+[total-balnce]{
+  margin-bottom: 2rem !important;
+  padding-bottom: 2rem;
+}
+
+[total-cost-info-container]{
+  margin-bottom: 2rem;
+}
+// purgecss --css css/newStyle.css --content index.html  --output css/purged.css
+
+// # sass with no source map Run this code
+// sass sass/style-input.scss css/newStyle.css --watch --no-source-map --style=compressed
